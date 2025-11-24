@@ -55,6 +55,10 @@ function showTopFlavors(jsonObj) {
         h2.textContent = topFlavors[i]["name"];
         image.setAttribute('src','https://raw.githubusercontent.com/shiv-coder/COMP1073W/main/lesson-10/lesson-10/images/' + topFlavors[i].image)
 
+        // Display calories
+        let calorieInfo = document.createElement('p');
+        calorieInfo.textContent = topFlavors[i]["calories"] + ' calories';
+
         // STEP 10g: Build a loop for the ingredients array in the JSON
         let ingredients = topFlavors[i]["ingredients"];
         for(let j=0;j<ingredients.length;j++){
@@ -65,6 +69,7 @@ function showTopFlavors(jsonObj) {
         }
         // STEP 10h: Append each of the above HTML elements to the ARTICLE element
         article.appendChild(h2);
+        article.appendChild(calorieInfo);
         article.appendChild(image);
         article.appendChild(ul);
         // STEP 10i: Append each complete ARTICLE element to the SECTION element
