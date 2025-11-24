@@ -59,6 +59,12 @@ function showTopFlavors(jsonObj) {
         let calorieInfo = document.createElement('p');
         calorieInfo.textContent = topFlavors[i]["calories"] + ' calories';
 
+        // Display type indicator
+        let typeInfo = document.createElement('p');
+        typeInfo.textContent = 'Type: ' + topFlavors[i]["type"];
+        typeInfo.style.textTransform = 'capitalize';
+        typeInfo.style.fontStyle = 'italic';
+
         // STEP 10g: Build a loop for the ingredients array in the JSON
         let ingredients = topFlavors[i]["ingredients"];
         for(let j=0;j<ingredients.length;j++){
@@ -69,6 +75,7 @@ function showTopFlavors(jsonObj) {
         }
         // STEP 10h: Append each of the above HTML elements to the ARTICLE element
         article.appendChild(h2);
+        article.appendChild(typeInfo);
         article.appendChild(calorieInfo);
         article.appendChild(image);
         article.appendChild(ul);
