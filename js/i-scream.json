@@ -25,6 +25,28 @@
         "clover honey"
       ],
       "image" : "peach-mango.svg"
+    },
+    {
+      "name" : "Blueberry Bliss",
+      "calories" : 320,
+      "type" : "sorbet",
+      "ingredients" : [
+        "wild blueberries",
+        "lemon zest",
+        "maple syrup"
+      ],
+      "image" : "ice-cream-xtra1.svg"
+    },
+    {
+      "name" : "Caramel Crunch",
+      "calories" : 420,
+      "type" : "ice cream",
+      "ingredients" : [
+        "salted caramel",
+        "pretzel pieces",
+        "toffee bits"
+      ],
+      "image" : "ice-cream-xtra2.svg"
     }
   ]
 }
